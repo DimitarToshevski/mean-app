@@ -1,2 +1,2 @@
 # mean-app
-Just an example mean app
+MongoDB, Node, Angular 6, Express
