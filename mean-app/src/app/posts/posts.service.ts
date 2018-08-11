@@ -33,6 +33,12 @@ export class PostsService {
     return this.postsUpdated.asObservable();
   }
 
+  getPost(id: string) {
+    return {
+      ...this.posts.find(p => p.id === id)
+    };
+  }
+
   addPost(title: string, content: string) {
     const post: Post = { id: null, title: title, content: content };
     this.http.post<{message: string, postId: string}>('http://localhost:3300/api/posts', post)
